@@ -1,0 +1,15 @@
+{
+  "name": "monke",
+  "version": "1.0.0",
+  "description": "Simple parser/interpreter for the monke programming language. For fun! Currently working on implementation.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && node dist/monke.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  }
+}
