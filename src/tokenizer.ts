@@ -26,11 +26,21 @@ export class Tokenizer {
 
     while (this.position < this.input.length) {
       const char = this.input[this.position];
+      const nextChar = this.input[this.position + 1];
       if (char === "fn") {
         tokens.push({ type: TokenType.FUNCTION, value: "fn" });
         this.position++;
-      } else if (char === ":") {
-        tokens.push({ type: TokenType.FNBLOCK, value: ":" });
+      } else if (char === "-") {
+        if (nextChar === ">") {
+          tokens.push({ type: TokenType.FNBLOCK, value: "->" });
+        }
+
+        // TODO: add substract tokenizer
+
+        this.position++;
+      } else if (char === ">") {
+        // do nothing and go to next position
+        // TODO: add comparison token
         this.position++;
       } else if (char === "(") {
         tokens.push({ type: TokenType.LPAREN, value: "(" });

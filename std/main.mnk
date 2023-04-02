@@ -1,1 +1,2 @@
-fn foo (x): foo(x)
+fn foo (x) -> foo(x)
+fn throwpoop(x) -> cool 
