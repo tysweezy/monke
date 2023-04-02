@@ -59,9 +59,9 @@ export class Tokenizer {
 	readName(): string {
 		let value = ''
 		while (/[a-z]+/.test(this.input[this.position])) {
-		  value += this.input[this.position]
-		  this.position++
+			value += this.input[this.position]
+			this.position++
 		}
 		return value
-	  }
+		}
 }
